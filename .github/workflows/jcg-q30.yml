@@ -15,8 +15,8 @@ name: jcg-q30 immortalwrt-mt798x Builder
 on:
   repository_dispatch:
   workflow_dispatch:
-  watch:
-    types: started
+  schedule:
+  #   - cron: 0 9 */15 * * 
 
 env:
   REPO_URL: https://github.com/hanwckf/immortalwrt-mt798x
