@@ -81,9 +81,11 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
         
-    - name: SSH Connection To Actions
-      uses: appleboy/ssh-action@master
-      if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'ssh')
+    - name: Start SSH via tmate
+      uses: P3TERX/ssh2actions@main
+      env:
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
     - name: Download package
       id: package
