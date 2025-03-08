@@ -25,7 +25,7 @@ env:
   CONFIG_FILE: 2410.config
   DIY_P1_SH: 2410part1.sh
   DIY_P2_SH: 2410part2.sh
-  SSH_ACTIONS: true
+  SSH_ACTIONS: false
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
