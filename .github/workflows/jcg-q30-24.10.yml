@@ -15,12 +15,14 @@ name: jcg-q30 24.10 immortalwrt-mt798x Builder
 on:
   repository_dispatch:
   workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
   watch:
     types: started
-    ssh:
-      description: 'SSH connection to Actions'
-      required: false
-      default: 'false'
+
 
 env:
   REPO_URL: https://github.com/NekokeCore/immortalwrt-mt798x-24.10
